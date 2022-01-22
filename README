@@ -31,6 +31,7 @@ Table of Contents:
         docker-compose up
 
 Url address to use on localhost
+To use all api url you should also be registered and have token.
 Using Postman variable which you can take from 'Variable.postman_environment.json'
 
     {{localhost}}{{post}}/<title>
