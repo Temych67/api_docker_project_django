@@ -62,4 +62,4 @@ Or enter url manually
     http://localhost:8000/api/vote/<title>-<vote_request>", api_vote_post_view, name="vope_comment"),
 
 This project also deployed on server Heroku, you can follow to the link:
-
+https://demotestsiteondjango.herokuapp.com/
