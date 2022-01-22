@@ -1,0 +1,65 @@
+# Project for test task from DevelopsToday #
+
+This project is use Python, Django, Django REST Framework and Postgresql
+
+Table of Contents:
+    api_docker_project - main project
+    account - account app
+    main_app - post,comment app
+# How to Install and Run the Project: #
+    To install and run project successfully you should have:
+        python version >= 3.7
+        Django >= 4.0
+            django-rest_framework
+            rest_framework.authtoken
+        psycopg2 >= 2.9.3
+
+    To run this project locally, you need to download this repository. Connect this project to your database.
+    Then complete all migrations and create a superuser:
+            python manage.py makemigrations
+            python manage.py migrate
+            python manage.py collectstatic
+            python manage.py createsuperuser
+    After that open the CLI in your project folder, and run the server.
+            python manage.py runserver
+    Or you can run this project with docker. You just need to open the console, write this command:
+        docker-compose run web python manage.py makemigrations
+        docker-compose run web python manage.py migrate
+        docker-compose run web python manage.py collectstatic
+        docker-compose run web python manage.py createsuperuser
+     and run docker compose:
+        docker-compose up
+
+Url address to use on localhost
+Using Postman variable which you can take from 'Variable.postman_environment.json'
+
+    {{localhost}}{{post}}<title>
+    {{localhost}}{{post}}<title>/update
+    {{localhost}}{{post}}<title>/delete
+    {{localhost}}{{post}}create
+    # comment url
+    {{localhost}}{{all_comments}}<title>"
+    {{localhost}}{{commentst}}<title>-<id_comment>
+    {{localhost}}{{commentst}}<title>-<id_comment>/update
+    {{localhost}}{{commentst}}<title>/create
+    {{localhost}}{{commentst}}<title>-<id_comment>/delete
+    # vote post url
+   {{localhost}}{{vote}}<title>-<vote_request>", api_vote_post_view, name="vope_comment"),
+
+Or enter url manually
+    # post url
+    http://localhost:8000/api/post_view/<title>
+    http://localhost:8000/api/post_view/<title>/update
+    http://localhost:8000/api/post_view/<title>/delete
+    http://localhost:8000/api/post_view/create
+    # comment url
+    http://localhost:8000/api/all_comments/<title>"
+    http://localhost:8000/api/comment/<title>-<id_comment>
+    http://localhost:8000/api/comment/<title>-<id_comment>/update
+    http://localhost:8000/api/comment/<title>/create
+    http://localhost:8000/api/comment/<title>-<id_comment>/delete
+    # vote post url
+    http://localhost:8000/api/vote/<title>-<vote_request>", api_vote_post_view, name="vope_comment"),
+
+This project also deployed on server Heroku, you can follow to the link:
+
