@@ -1,0 +1,1 @@
+web: gunicorn api_docker_project.wsgi --log-file -
