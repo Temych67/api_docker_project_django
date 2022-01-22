@@ -20,6 +20,7 @@ CREATE_SUCCESS = "created"
 UPVOTE_SUCCESS = "upnvote was success "
 DOWNVOTE_SUCCESS = "downvote was success "
 
+
 @api_view(
     [
         "GET",
@@ -212,7 +213,7 @@ def api_create_comment_view(request, title):
 def api_vote_post_view(request, title, vote_request):
     account = request.user
     post = Post.objects.get(title=title)
-    data={}
+    data = {}
     if request.method == "POST":
         try:
             vote = Vote.objects.get(postID=post, userID=account)
