@@ -21,7 +21,7 @@ urlpatterns = [
     path("post_view/<title>", api_detail_post_view, name="detail_post"),
     path("post_view/<title>/update", api_update_post_view, name="update"),
     path("post_view/<title>/delete", api_delete_post_view, name="delete"),
-    path("post_view/create", api_create_post_view, name="create"),
+    path("post/create", api_create_post_view, name="create"),
     # comment url
     path("all_comments/<title>", ApiAllCommentsView.as_view(), name="detail_all_comments"),
     path(
