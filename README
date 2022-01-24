@@ -23,6 +23,7 @@ Table of Contents:
     After that open the CLI in your project folder, and run the server.
             python manage.py runserver
     Or you can run this project with docker. You just need to open the console, write this command:
+        docker-compose build
         docker-compose run web python manage.py makemigrations
         docker-compose run web python manage.py migrate
         docker-compose run web python manage.py collectstatic
